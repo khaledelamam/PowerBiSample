@@ -1,0 +1,8 @@
+TaxAmountMeasure = 
+SUMX(
+    'YourTable',
+    DIVIDE(
+        CONVERT('YourTable'[linetotal], DECIMAL(18,5)),
+        'YourTable'[subtotal]
+    ) * 'YourTable'[taxamt]
+)

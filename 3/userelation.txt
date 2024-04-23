@@ -1,0 +1,7 @@
+Sales by Ship Date = CALCULATE(
+SUM(FactInternetSales[SalesAmount]),
+USERELATIONSHIP(
+FactInternetSales[ShipDateKey],
+DimDate[DateKey]
+)
+)
