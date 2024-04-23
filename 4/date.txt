@@ -1,0 +1,19 @@
+Dimdate= VAR minyear=LEFT(FORMAT(MIN(FactOrderDetails[OrderDateKey]),""),4)
+ VAR maxyear=LEFT(FORMAT(max(FactOrderDetails[OrderDateKey]),""),4)
+ var mindate=DATE(minyear,1,1) 
+var maxdate=DATE(maxyear,12,31) RETURN CALENDAR(mindate,maxdate)
+
+RETURN 
+CALENDAR(mindate,maxdate)-----> this after create table
+
+
+for year ,month ,week ,day 
+
+year =year(name of table)
+month =month(name of table)
+etc.
+
+to make date int 
+
+datekey = FORMAT(Dimdate[Date],"yyyymmdd")
+

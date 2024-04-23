@@ -1,0 +1,2 @@
+MaxQtyByProduct = CALCULATE(MAX(FactOrderDetails[OrderQty]),
+ALLEXCEPT(FactOrderDetails, FactOrderDetails[ProductID]))
